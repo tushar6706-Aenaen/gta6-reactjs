@@ -87,13 +87,13 @@ function App() {
                 <img className="absolute w-full h-full object-cover" src="./sky.png" alt="" />
                 <img className="absolute  w-full h-full object-cover" src="./bg.png" alt="" />
 
-              <div className='text top-0 z-1 text-8xl left-1/2 -translate-x-1/2  text-white absolute  '>
-                  <h1 className='-ml-15'>grand</h1>
-                  <h1 className='ml-15'>theft</h1>
-                  <h1 className='-ml-15'>auto</h1>
+              <div className='text top-0 gap-3 z-1 flex flex-col text-8xl left-1/2 -translate-x-1/2  text-white absolute  '>
+                  <h1 className='-ml-30 leading-none'>grand</h1>
+                  <h1 className='ml-15  leading-none'>theft</h1>
+                  <h1 className='-ml-15 leading-none'>auto</h1>
 
               </div>
-                <div className=' absolute  opacity-30 h-screen w-full bg-black '></div>
+                <div className=' absolute  opacity-20 h-screen w-full bg-black '></div>
                 <img className='absolute z-10  left-[50%] right-[50%] -translate-x-[50%]  -translate-y-[18%]   scale-[60%] object-cover' src="./gb1.png" alt="" />
               </div>
 
