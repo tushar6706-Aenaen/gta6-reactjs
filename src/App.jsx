@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import 'remixicon/fonts/remixicon.css'
 function App() {
   const [showContent, setShowContent] = useState(false);
   useGSAP(() => {
@@ -73,9 +74,9 @@ function App() {
               <nav className='navbar absolute z-10 top-0 left-0 w-full py-5 px-10 '>
                 <div className='logo flex  gap-6 '>
                   <div className='lines flex flex-col gap-[6px]'>
-                    <div className='line w-13 h-2 bg-white'></div>
-                    <div className='line w-6 h-2 bg-white'></div>
-                    <div className='line w-3 h-2 bg-white'></div>
+                    <div className='line w-13 h-1.5 bg-white'></div>
+                    <div className='line w-6 h-1.5 bg-white'></div>
+                    <div className='line w-3 h-1.5 bg-white'></div>
                   </div>
                   <h3 className='text-2xl mt-[-6px] leading-none text-white'>Rockstar</h3>
                 </div>
@@ -85,9 +86,30 @@ function App() {
               <div className='imagesdiv w-full h-screen  '>
                 <img className="absolute w-full h-full object-cover" src="./sky.png" alt="" />
                 <img className="absolute  w-full h-full object-cover" src="./bg.png" alt="" />
-                <div className=' absolute opacity-60 h-screen w-full bg-black '></div>
-                <img className='absolute sm:scale-[60%] left-[50%] right-[50%] -translate-x-[50%] sm:-translate-y-[18%] -translate-y-[-35%]   scale-[150%] object-cover' src="./gb1.png" alt="" />
+
+              <div className='text top-0 z-1 text-8xl left-1/2 -translate-x-1/2  text-white absolute  '>
+                  <h1 className='-ml-15'>grand</h1>
+                  <h1 className='ml-15'>theft</h1>
+                  <h1 className='-ml-15'>auto</h1>
+
               </div>
+                <div className=' absolute  opacity-30 h-screen w-full bg-black '></div>
+                <img className='absolute z-10  left-[50%] right-[50%] -translate-x-[50%]  -translate-y-[18%]   scale-[60%] object-cover' src="./gb1.png" alt="" />
+              </div>
+
+
+              {/* bottom bar  */}
+              <div className='bottombar absolute bottom-0 left-0 w-full py-5 px-10    bg-gradient-to-t from-black to-transparent text-white
+               '>
+
+                <div className='scrolldwn flex gap-4 items-center'>
+                  <i class="text-3xl ri-arrow-down-line"></i>
+                  <h3 className='scrolldown text-md  '>Scrolldown</h3>
+                </div>
+
+                <img className=' absolute top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 h-[40px]' src="./ps5.png" alt="" />
+              </div>
+
             </div>
           </div>
 

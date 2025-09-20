@@ -2,19 +2,29 @@
 
 @font-face {
     font-family: "pricedown";
-    src: url("./pricedown.otf") ;
+    src: url("./pricedown.otf");
 }
 
-
-html,body, #root {
-  
-  width: 100%;
-  font-family: 'pricedown', sans-serif;
+.scrolldown {
     
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+
+}
+
+html,
+body,
+#root {
+
+    width: 100%;
+    font-family: 'pricedown', sans-serif;
+
 }
 
 
-.img-obj-svg{
-  object-fit: cover;
-  object-position: center;
+.img-obj-svg {
+    object-fit: cover;
+    object-position: center;
 }
