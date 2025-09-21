@@ -5,10 +5,14 @@
     src: url("./pricedown.otf");
 }
 
+body{
+    overflow: hidden;
+}
+
 .scrolldown {
-    
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
+
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
   font-style: normal;
 
 

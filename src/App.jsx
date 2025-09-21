@@ -31,6 +31,26 @@ function App() {
 
   })
 
+  useGSAP(() => {
+    const main = document.querySelector('.main');
+    main?.addEventListener("mousemove", function (e) {
+      // console.log(e.clientX, e.clientY);
+      const xMove = (e.clientX /  window.innerWidth - .5) * 40 ;
+      gsap.to(".imagesdiv .text",{
+        x:`${xMove * .4}%`
+      })
+
+      gsap.to(".imagesdiv .sky",{
+        x:xMove
+      })
+
+      gsap.to(".imagesdiv .bg",{
+        x:xMove * 1.7
+      })
+ 
+    })
+  }, [showContent])
+
 
   return (
     <>
@@ -83,18 +103,18 @@ function App() {
               </nav>
 
               {/* imgs */}
-              <div className='imagesdiv w-full h-screen  '>
-                <img className="absolute w-full h-full object-cover" src="./sky.png" alt="" />
-                <img className="absolute  w-full h-full object-cover" src="./bg.png" alt="" />
+              <div className='imagesdiv w-full  h-screen  '>
+                <img className="sky scale-[1.2]  absolute w-full h-full object-cover" src="./sky.png" alt="" />
+                <img className="bg absolute scale-[1.2]  w-full h-full object-cover" src="./bg.png" alt="" />
 
-              <div className='text top-0 gap-3 z-1 flex flex-col text-8xl left-1/2 -translate-x-1/2  text-white absolute  '>
+                <div className='text top-15 gap-3 z-1 flex flex-col text-8xl left-1/2 -translate-x-1/2  text-white absolute  '>
                   <h1 className='-ml-30 leading-none'>grand</h1>
                   <h1 className='ml-15  leading-none'>theft</h1>
                   <h1 className='-ml-15 leading-none'>auto</h1>
 
-              </div>
+                </div>
                 <div className=' absolute  opacity-20 h-screen w-full bg-black '></div>
-                <img className='absolute z-10  left-[50%] right-[50%] -translate-x-[50%]  -translate-y-[18%]   scale-[60%] object-cover' src="./gb1.png" alt="" />
+                <img className='character absolute z-10  -bottom-[32%] left-1/2 -translate-x-1/2  scale-[60%] object-cover' src="./gb1.png" alt="" />
               </div>
 
 
@@ -103,7 +123,7 @@ function App() {
                '>
 
                 <div className='scrolldwn flex gap-4 items-center'>
-                  <i class="text-3xl ri-arrow-down-line"></i>
+                  <i className="text-3xl ri-arrow-down-line"></i>
                   <h3 className='scrolldown text-md  '>Scrolldown</h3>
                 </div>
 
