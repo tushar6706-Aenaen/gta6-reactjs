@@ -5,7 +5,7 @@
     src: url("./pricedown.otf");
 }
 
-body{
+.landing {
     overflow: hidden;
 }
 

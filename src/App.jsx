@@ -32,22 +32,60 @@ function App() {
   })
 
   useGSAP(() => {
+    if (!showContent) return;
+
+    gsap.to(".main", {
+      scale: 1,
+      rotate: 0,
+      duration: 2,
+      delay: -1,
+      ease: "Expo.easeInOut"
+    })
+
+
+    gsap.to(".sky", {
+      scale: 1.2,
+      rotate: 0,
+      duration: 2,
+      delay: -.8,
+      ease: "Expo.easeInOut"
+    })
+    gsap.to(".bg", {
+      scale: 1.2,
+      rotate: 0,
+      duration: 2,
+      delay: -.8,
+      ease: "Expo.easeInOut"
+    })
+
+
+     gsap.to(".character", {
+      scale: .6,
+      x:"-50%",
+      bottom:"-32%",
+      rotate: 0,
+      duration: 2,
+      delay: -.8,
+      ease: "Expo.easeInOut"
+    })
+
+    
     const main = document.querySelector('.main');
     main?.addEventListener("mousemove", function (e) {
       // console.log(e.clientX, e.clientY);
-      const xMove = (e.clientX /  window.innerWidth - .5) * 40 ;
-      gsap.to(".imagesdiv .text",{
-        x:`${xMove * .4}%`
+      const xMove = (e.clientX / window.innerWidth - .5) * 40;
+      gsap.to(".imagesdiv .text", {
+        x: `${xMove * .4}%`
       })
 
-      gsap.to(".imagesdiv .sky",{
-        x:xMove
+      gsap.to(".imagesdiv .sky", {
+        x: xMove
       })
 
-      gsap.to(".imagesdiv .bg",{
-        x:xMove * 1.7
+      gsap.to(".imagesdiv .bg", {
+        x: xMove * 1.7
       })
- 
+
     })
   }, [showContent])
 
@@ -87,7 +125,7 @@ function App() {
       </div>
       {
         showContent && (
-          <div className='main w-full '>
+          <div className='main w-full rotate-[-10deg] scale-[1.7]  '>
             <div className='landing w-full h-screen bg-black '>
 
               {/* navbar */}
@@ -103,9 +141,9 @@ function App() {
               </nav>
 
               {/* imgs */}
-              <div className='imagesdiv w-full  h-screen  '>
-                <img className="sky scale-[1.2]  absolute w-full h-full object-cover" src="./sky.png" alt="" />
-                <img className="bg absolute scale-[1.2]  w-full h-full object-cover" src="./bg.png" alt="" />
+              <div className='imagesdiv w-full h-screen overflow-hidden relative'>
+                <img className="sky scale-[1.5] rotate-[-20deg]  absolute w-full h-full object-cover" src="./sky.png" alt="" />
+                <img className="bg absolute scale-[1.8] rotate-[-3deg]  w-full h-full object-cover" src="./bg.png" alt="" />
 
                 <div className='text top-15 gap-3 z-1 flex flex-col text-8xl left-1/2 -translate-x-1/2  text-white absolute  '>
                   <h1 className='-ml-30 leading-none'>grand</h1>
@@ -114,7 +152,7 @@ function App() {
 
                 </div>
                 <div className=' absolute  opacity-20 h-screen w-full bg-black '></div>
-                <img className='character absolute z-10  -bottom-[32%] left-1/2 -translate-x-1/2  scale-[60%] object-cover' src="./gb1.png" alt="" />
+                <img className='character absolute z-10 rotate-[-10deg]  -bottom-[70%] left-1/2 -translate-x-1/2  scale-[1] object-cover' src="./gb1.png" alt="" />
               </div>
 
 
@@ -131,6 +169,9 @@ function App() {
               </div>
 
             </div>
+
+
+
           </div>
 
         )
